@@ -1,15 +1,16 @@
-const path = require('path'); 
-const webpack = require('webpack'); 
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/index.js',
+        app: './src/js/index.js',
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     mode: 'development',
+    devtool: "inline-source-map", // 不能在生产环境中使用
     module: {
         rules: [{
             test: /\.js$/,
