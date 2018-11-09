@@ -111,7 +111,7 @@ class PCHeader extends Component {
 
     // 退出登录
     logout() {
-        localStorage.userid = '';
+        localStorage.userId = '';
         localStorage.userNickName = '';
         this.setState({
             hasLogined: false
