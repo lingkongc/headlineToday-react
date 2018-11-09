@@ -1,0 +1,21 @@
+.header a {
+    text-decoration: none;
+}
+
+.header__logo {
+    align-items: center;
+    display: flex;
+}
+
+.header__img {
+    width: 48px;
+    height: 48px;
+}
+
+.header__span {
+    padding-left: 10px;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #1890ff;
+}
