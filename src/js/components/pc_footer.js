@@ -8,6 +8,7 @@ class PCFooter extends Component {
         let currentDate = new Date();
         return (
             <footer className="footer">
+                <Row style={{ height: 16 }}></Row>
                 <Row>
                     <Col md={2}></Col>
                     <Col md={20}>

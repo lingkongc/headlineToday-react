@@ -1,0 +1,8 @@
+/* 轮播图 */
+.ant-carousel .slick-slider {
+    text-align: center;
+    height: 350px;
+    width: 500px;
+    background: #364d79;
+    overflow: hidden;
+}
