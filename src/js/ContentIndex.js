@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import { Row, Col, Tabs, Carousel } from 'antd';
 
-import NewsList from './news_list';
-import ImageList from './news_image';
+import NewsList from './NewsList';
+import NewsListImage from './NewsListImage';
 
-import '../../css/news_container.css';
+import '../css/ContentIndex.css';
 
-import carousel_1 from '../../image/carousel_1.jpg'
-import carousel_2 from '../../image/carousel_2.jpg'
-import carousel_3 from '../../image/carousel_3.jpg'
-import carousel_4 from '../../image/carousel_4.jpg'
+import carousel_1 from '../image/carousel_1.jpg'
+import carousel_2 from '../image/carousel_2.jpg'
+import carousel_3 from '../image/carousel_3.jpg'
+import carousel_4 from '../image/carousel_4.jpg'
 
 
-class NewsContainer extends Component {
+class ContentIndex extends Component {
     render() {
         return (
             <div>
                 <Row style={{ height: 16 }}></Row>
+                
                 <Row gutter={16}>
                     <Col md={2}></Col>
                     <Col md={10} className="container">
@@ -44,11 +45,13 @@ class NewsContainer extends Component {
                     </Col>
                     <Col md={2}></Col>
                 </Row>
+
                 <Row style={{ height: 16 }}></Row>
+
                 <Row>
                     <Col md={2}></Col>
                     <Col md={20}>
-                        <ImageList count="6" type="guoji" cardTitle="国际头条"></ImageList>
+                        <NewsListImage count="6" type="guoji" cardTitle="国际头条"></NewsListImage>
                     </Col>
                     <Col md={2}></Col>
                 </Row>
@@ -58,4 +61,4 @@ class NewsContainer extends Component {
 }
 
 
-export default NewsContainer;
+export default ContentIndex;

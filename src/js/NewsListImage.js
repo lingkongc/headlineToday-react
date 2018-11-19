@@ -13,7 +13,7 @@ const styleH3 = {
     whiteSpace: "nowrap"
 }
 
-class ImageList extends Component {
+class NewsListImage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -64,4 +64,4 @@ class ImageList extends Component {
     }
 }
 
-export default ImageList;
+export default NewsListImage;

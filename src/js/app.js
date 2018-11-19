@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import PCHeader from './components/pc_header.js';
-import PCFooter from './components/pc_footer.js';
-import NewsContainer from './components/news_container';
+import Header from './Header/Header.js';
+import Footer from './Footer/Footer.js';
+import NewsContainer from './ContentIndex';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -10,9 +10,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PCHeader />
+        <Header />
         <NewsContainer />
-        <PCFooter />
+        <Footer />
       </div>
     );
   }
