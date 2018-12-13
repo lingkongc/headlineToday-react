@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
 
-import "./Footer.css";
+import "./style.css";
 
-class Footer extends Component {
+class Index extends Component {
     render() {
         let currentDate = new Date();
         return (
@@ -21,4 +21,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default Index;

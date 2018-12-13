@@ -1,21 +1,27 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
+import {HashRouter, Route} from "react-router-dom";
 
-import Header from './Header/Header.js';
-import Footer from './Footer/Footer.js';
-import NewsContainer from './ContentIndex';
+import Header from './Header';
+import Footer from './Footer';
+import ContentIndex from './ContentIndex';
+import Detail from './Detail';
+import Usercneter from './Usercenter'
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <NewsContainer />
-        <Footer />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <HashRouter>
+                <div>
+                    <Header/>
+                    <Route exact path="/" component={ContentIndex}/>
+                    <Route path="/article/:uniquekey" component={Detail}/>
+                    <Route path="/usercenter" component={Usercneter}/>
+                    <Footer/>
+                </div>
+            </HashRouter>
+        );
+    }
 }
 
 export default App;

@@ -1,14 +1,26 @@
 import React, {Component} from 'react';
-import {Col, Row, Menu, Icon, Tabs, message, Form, Input, Button, Checkbox, Modal} from 'antd';
+import {Link} from 'react-router-dom';
+import {
+    Col,
+    Row,
+    Menu,
+    Icon,
+    Tabs,
+    message,
+    Form,
+    Input,
+    Button,
+    Modal
+} from 'antd';
 
-import './Header.css';
+import './style.css';
 
 import logo from '../../image/news_logo.svg';
 
 const PATH_BASE = 'http://newsapi.gugujiankong.com/Handler.ashx';
 
 
-class Header extends Component {
+class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -151,18 +163,6 @@ class Header extends Component {
                             <Menu.Item key="menu-shehui">
                                 <Icon type="paper-clip"/>社会
                             </Menu.Item>
-                            <Menu.Item key="menu-guonei">
-                                <Icon type="paper-clip"/>国内
-                            </Menu.Item>
-                            <Menu.Item key="menu-guoji">
-                                <Icon type="paper-clip"/>国际
-                            </Menu.Item>
-                            <Menu.Item key="menu-yule">
-                                <Icon type="paper-clip"/>娱乐
-                            </Menu.Item>
-                            <Menu.Item key="menu-tiyu">
-                                <Icon type="paper-clip"/>体育
-                            </Menu.Item>
                             {
                                 hasLogined
                                     ? <Menu.Item key="login" className="register">
@@ -170,9 +170,11 @@ class Header extends Component {
                                             {userNickName}
                                         </Button>
                                         &nbsp;&nbsp;&nbsp;
-                                        <Button type="dashed" htmlType="button">
-                                            个人中心
-                                        </Button>
+                                        <span>
+                                            <Link to="/usercenter">
+                                                <Button type="dashed" htmlType="button">个人中心</Button>
+                                            </Link>
+                                        </span>
                                         &nbsp;&nbsp;&nbsp;
                                         <Button type="ghost" htmlType="button" onClick={this.logout}>
                                             退出账户
@@ -258,5 +260,5 @@ class Header extends Component {
     }
 }
 
-Header = Form.create()(Header);
-export default Header;
+Index = Form.create()(Index);
+export default Index;
